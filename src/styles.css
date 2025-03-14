@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Futuristic Theme */
 body {
   background-color: #0d0d0d;
@@ -13,6 +15,7 @@ body {
   margin: auto;
 }
 
+/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -51,4 +54,97 @@ body {
 
 .content {
   padding: 2rem;
+}
+
+/* Form Styling */
+.stream-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stream-form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #00ffff;
+  background: #203a43;
+  color: white;
+}
+
+.stream-form button {
+  background-color: #00ffff;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.stream-form button:hover {
+  background-color: #ff00ff;
+  color: white;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+/* List Styling */
+.stream-list ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.stream-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  background: #203a43;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.stream-list .completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Action Buttons */
+.actions button {
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #00ffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.actions button:hover {
+  color: #ff00ff;
+}
+
+/* General Button Styling */
+button {
+  background: linear-gradient(90deg, #ff00ff, #ff8800);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 0 15px #ff00ff;
+  transform: scale(1.1);
 }
