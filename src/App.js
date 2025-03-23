@@ -14,7 +14,7 @@ function App() {
           <h1>StreamList</h1>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/movies">Movies</Link></li>
+            <li><Link to="/movies">Movies</Link></li>  {/* Updated Route */}
             <li><Link to="/cart">Cart</Link></li>
             <li><Link to="/about">About</Link></li>
           </ul>
@@ -22,7 +22,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/movies" element={<Movies />} />
+            <Route path="/movies" element={<Movies />} />  {/* Updated Route */}
             <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
           </Routes>

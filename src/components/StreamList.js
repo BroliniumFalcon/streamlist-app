@@ -1,12 +1,20 @@
-import React, { useState } from "react";
-import { FaEdit, FaTrash, FaCheck } from "react-icons/fa"; // Import icons
-import StreamListForm from "./StreamListForm"; // Ensure correct import
+import React, { useState, useEffect } from "react";
+import { FaEdit, FaTrash, FaCheck } from "react-icons/fa";
+import StreamListForm from "./StreamListForm";
 
 function StreamList() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(() => {
+    const savedItems = localStorage.getItem("streamlist");
+    return savedItems ? JSON.parse(savedItems) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("streamlist", JSON.stringify(items));
+  }, [items]);
 
   const addItem = (item) => {
-    setItems([...items, { text: item, completed: false }]);
+    const newItems = [...items, { text: item, completed: false }];
+    setItems(newItems);
   };
 
   const toggleComplete = (index) => {
